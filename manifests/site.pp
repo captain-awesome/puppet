@@ -19,7 +19,7 @@
 
 # Define filebucket 'main':
 filebucket { 'main':
-  server => 'rabelard1.mylabserver.com',
+  server => 'rabelard0.mylabserver.com',
   path   => false,
 }
 
