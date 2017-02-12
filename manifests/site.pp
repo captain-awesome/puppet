@@ -43,5 +43,5 @@ node default {
 }
 
 node "rabelard2.mylabserver.com" {
-  notify {'this is a test notify'}
+  notify {'this is a test notify':}
 }
