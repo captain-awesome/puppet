@@ -43,5 +43,8 @@ node default {
 }
 
 node "rabelard2.mylabserver.com" {
+  include localusers
+  include localusers::groups::wheel
+  include localusers::groups::wheel
   notify {'this is a test notify':}
 }
