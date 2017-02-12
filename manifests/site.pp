@@ -41,3 +41,7 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+
+node "rabelard2.mylabserver.com" {
+  notify {'this is a test notify'}
+}
