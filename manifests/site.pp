@@ -26,6 +26,9 @@ filebucket { 'main':
 # Make filebucket 'main' the default backup location for all File resources:
 File { backup => 'main' }
 
+# Removes the "allow_virtual parameter" warning
+Package { allow_virtual => true }
+
 # DEFAULT NODE
 # Node definitions in this file are merged with node data from the console. See
 # http://docs.puppetlabs.com/guides/language_guide.html#nodes for more on
