@@ -9,11 +9,10 @@ class base::ssh {
     group   => 'root',
     require => Package ['openssh-package'],
     source  => 'puppet:///modules/base/sshd_config',
-    }
-    service {'sshd':
-      ensure    => running,
-      enable    => true,
-      suscribe  => File['/etc/ssh/sshd_config'],
-    }
+  }
+  service {'sshd':
+    ensure    => running,
+    enable    => true,
+    suscribe  => File['/etc/ssh/sshd_config'],
   }
 }
