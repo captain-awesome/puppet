@@ -13,6 +13,6 @@ class base::ssh {
   service {'sshd':
     ensure    => running,
     enable    => true,
-    suscribe  => File['/etc/ssh/sshd_config'],
+    subscribe => File['/etc/ssh/sshd_config'],
   }
 }
