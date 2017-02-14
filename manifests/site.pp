@@ -49,5 +49,7 @@ node "rabelard2.mylabserver.com" {
   include localusers
   include localusers::groups::wheel
   include localusers::groups::finance
+  include base
+  include base::ssh
   notify {'this is a test notify':}
 }
