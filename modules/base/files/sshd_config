@@ -1,4 +1,5 @@
 # This file is managed by Puppet
+# Comment 2
 
 #	$OpenBSD: sshd_config,v 1.80 2008/07/02 02:24:18 djm Exp $
 
