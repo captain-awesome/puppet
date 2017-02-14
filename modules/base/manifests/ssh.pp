@@ -1,14 +1,16 @@
 class base::ssh {
   package {'openssh-package':
-    name    => 'openssh',
+    name    => 'openssh-server',
     ensure  => present,
+    #before  => File['/etc/ssh/sshd_config'],
   }
   file {'/etc/ssh/sshd_config':
     ensure  => file,
     owner   => 'root',
     group   => 'root',
-    #require => Package ['openssh-package'],
     source  => 'puppet:///modules/base/sshd_config',
+    require => Package ['openssh-package'],
+    notify  => Service['sshd']
   }
   service {'sshd':
     ensure    => running,
