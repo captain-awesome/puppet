@@ -18,7 +18,7 @@ class base::ssh {
     notify  => Service['ssh-service']
   }
   service {'ssh-service':
-    name    => $ssh_name
+    name    => $ssh_name,
     ensure  => running,
     enable  => true,
     #subscribe => File['/etc/ssh/sshd_config'],
