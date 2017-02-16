@@ -53,3 +53,7 @@ node "rabelard2.mylabserver.com" {
   include base::ssh
   notify {'this is a test notify':}
 }
+
+node 'rabelard3.mylabserver.com' {
+  include pe_repo::platform::ubuntu_1404_amd64
+}
