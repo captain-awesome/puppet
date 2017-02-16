@@ -45,6 +45,10 @@ node default {
   #   class { 'my_class': }
 }
 
+node 'rabelard1.mylabserver.com' {
+  include pe_repo::platform::ubuntu_1404_amd64
+}
+
 node 'rabelard2.mylabserver.com' {
   include localusers
   include localusers::groups::wheel
@@ -52,8 +56,4 @@ node 'rabelard2.mylabserver.com' {
   include base
   include base::ssh
   notify {'this is a test notify':}
-}
-
-node 'rabelard3.mylabserver.com' {
-  include pe_repo::platform::ubuntu_1404_amd64
 }
