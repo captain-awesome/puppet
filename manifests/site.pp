@@ -45,7 +45,7 @@ node default {
   #   class { 'my_class': }
 }
 
-node "rabelard2.mylabserver.com" {
+node 'rabelard2.mylabserver.com' {
   include localusers
   include localusers::groups::wheel
   include localusers::groups::finance
