@@ -49,7 +49,7 @@ node 'rabelard1.mylabserver.com' {
   include pe_repo::platform::ubuntu_1404_amd64
 }
 
-node 'rabelard2.mylabserver.com' {
+node /^rabelard\d{1}.mylabserver.com$/ {
   include localusers
   include localusers::groups::wheel
   include localusers::groups::finance
