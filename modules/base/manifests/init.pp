@@ -1,6 +1,6 @@
 class base {
   $dnsutils = $osfamily ? {
-    'RedHat'  => 'bind-utils'.
+    'RedHat'  => 'bind-utils',
     'Debian'  => 'dnsutils',
   }
   package {['tree', $dnsutils]:
