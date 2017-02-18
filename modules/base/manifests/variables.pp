@@ -5,5 +5,5 @@ class base::variables {
     group     => 'root',
     mode      => '0644',
   }
-  notify ("${::operatingsystem} is your operating system":)
+  notify {"${::operatingsystem} is your operating system":}
 }
