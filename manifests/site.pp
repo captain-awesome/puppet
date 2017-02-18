@@ -39,6 +39,8 @@ Package { allow_virtual => true }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+$topscope = 'This is from out site.pp file'
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
@@ -50,6 +52,7 @@ node 'rabelard1.mylabserver.com' {
 }
 
 node /^rabelard\d{1}.mylabserver.com$/ {
+  $nodescrope = 'this is defined within out node'
   include localusers
   include localusers::groups::wheel
   include localusers::groups::finance
