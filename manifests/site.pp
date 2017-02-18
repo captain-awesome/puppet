@@ -38,7 +38,7 @@ Package { allow_virtual => true }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-$topscope = 'This is from out site.pp file'
+$topscope = 'This is from our site.pp file'
 
 node default {
   # This is where you can declare classes for all nodes.
