@@ -1,2 +1,2 @@
-include base::params
 include base::ssh
+include base::params
