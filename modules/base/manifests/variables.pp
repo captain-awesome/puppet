@@ -11,8 +11,8 @@ class base::variables {
   $nodescope = 'new nodescope'
 
   #notify {"${topscope} is your topscope variable":}
-  notify {"${::topscope} - within the variables class":}
-  notify {"${nodescope} - within the variables class":}
-  notify {"${localvar} - within the variables class":}
-  notify {"${::operatingsystem} is your operating system":}
+  #notify {"${::topscope} - within the variables class":}
+  #notify {"${nodescope} - within the variables class":}
+  #notify {"${localvar} - within the variables class":}
+  #notify {"${::operatingsystem} is your operating system":}
 }

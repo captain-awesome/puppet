@@ -5,6 +5,7 @@ class base::ssh {
     ensure  => present,
     #before  => File['/etc/ssh/sshd_config'],
   }
+
   file {'/etc/ssh/sshd_config':
     ensure  => file,
     owner   => 'root',
@@ -13,6 +14,7 @@ class base::ssh {
     require => Package['openssh-package'],
     notify  => Service['ssh-service'],
   }
+
   service {'ssh-service':
     name    => $base::params::ssh_name,
     ensure  => running,
