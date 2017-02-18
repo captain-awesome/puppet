@@ -10,8 +10,8 @@ class base::ssh {
     owner   => 'root',
     group   => 'root',
     source  => 'puppet:///modules/base/sshd_config',
-    require => Package ['openssh-package'],
-    notify  => Service['ssh-service']
+    require => Package['openssh-package'],
+    notify  => Service['ssh-service'],
   }
   service {'ssh-service':
     name    => $base::params::ssh_name,
