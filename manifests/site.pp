@@ -52,11 +52,12 @@ node 'rabelard1.mylabserver.com' {
 }
 
 node /^rabelard\d{1}.mylabserver.com$/ {
-  $nodescrope = 'this is defined within out node'
+  $nodescope = 'this is defined within our node'
   include localusers
   include localusers::groups::wheel
   include localusers::groups::finance
   include base
   include base::ssh
+  include base::variables
   notify {'this is a test notify':}
 }

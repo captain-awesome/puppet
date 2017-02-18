@@ -1,6 +1,6 @@
 class base::variables {
   file {'/root/var_test.txt':
-    contents  => $topscope,
+    content  => $topscope,
     owner     => 'root',
     group     => 'root',
     mode      => '0644',
