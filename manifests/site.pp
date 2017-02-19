@@ -56,8 +56,9 @@ node /^rabelard\d{1}.mylabserver.com$/ {
   include localusers::groups::wheel
   include localusers::groups::finance
   include base
-  include base::ssh
   include base::params
+  include base::ssh
   include base::variables
+  include panda
   #notify {'this is a test notify':}
 }
