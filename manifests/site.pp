@@ -60,6 +60,7 @@ node /^rabelard\d{1}.mylabserver.com$/ {
   include base::params
   include base::variables
   include base::motd
+  include ntp
   include panda
   #notify {'this is a test notify':}
 }
