@@ -1,7 +1,7 @@
 class ntp::file {
 
   case  $::operatingsystem {
-    'ubuntu': {$template = 'ntp_unbuntu.conf'}
+    'ubuntu': {$template = 'ntp_ubuntu.conf'}
     'centos': {$template = 'ntp_centos.conf'}
     default:  {fail('OS $::operatingsystem is not currently supported')}
   }
