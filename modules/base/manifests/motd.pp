@@ -1,6 +1,6 @@
 class base::motd {
 
-  $arthur = 'lucius'
+  $arthor = 'lucius'
 
   file {'/etc/motd':
     ensure  => file,
