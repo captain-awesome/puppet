@@ -1,4 +1,4 @@
-class base::ssh {
+class base::ssh () inherits base::param {
 
   package {'openssh-package':
     ensure  => present,
