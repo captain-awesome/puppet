@@ -1,4 +1,4 @@
-class base::ssh {
+class base::ssh inherits base::params {
 
   package {'openssh-package':
     ensure  => present,
@@ -17,7 +17,8 @@ class base::ssh {
 
   service {'ssh-service':
     ensure  => running,
-    name    => $base::params::ssh_name,
+    name    => $ssh_name,
+    #name    => $base::params::ssh_name,
     enable  => true,
     #subscribe => File['/etc/ssh/sshd_config'],
   }
