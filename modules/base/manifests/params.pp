@@ -4,4 +4,5 @@ class base::params {
     'Debian': {$ssh_name = 'ssh'}
     default: {fail ('OS not supported by Puppet module SSH')}
   }
+  $arthur = 'lucius fox'
 }
