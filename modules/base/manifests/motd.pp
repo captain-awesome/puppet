@@ -6,8 +6,7 @@ class base::motd {
     ensure  => file,
     owner   => 'root',
     group   => 'root',
-    content => temaplate('base/motd.erb'),
+    content => template('base/motd.erb'),
     mode    => '0644',
     }
   }
-}
