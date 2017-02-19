@@ -1,8 +1,8 @@
 class base::ssh {
 
   package {'openssh-package':
-    name    => 'openssh-server',
     ensure  => present,
+    name    => 'openssh-server',
     #before  => File['/etc/ssh/sshd_config'],
   }
 
@@ -16,8 +16,8 @@ class base::ssh {
   }
 
   service {'ssh-service':
-    name    => $base::params::ssh_name,
     ensure  => running,
+    name    => $base::params::ssh_name,
     enable  => true,
     #subscribe => File['/etc/ssh/sshd_config'],
   }
