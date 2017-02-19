@@ -1,5 +1,3 @@
-# panda
-
 class panda {
 
   # realize File['/tmp/2']
