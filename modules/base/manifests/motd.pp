@@ -1,6 +1,6 @@
 class base::motd {
 
-  $arthor = 'lucius'
+  $arthor = $base::params::arthor
 
   file {'/etc/motd':
     ensure  => file,
