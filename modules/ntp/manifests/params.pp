@@ -1,4 +1,5 @@
 class ntp::params {
+
   case  $::operatingsystem {
     'ubuntu': {
       $template = 'ntp_ubuntu.conf'

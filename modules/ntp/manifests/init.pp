@@ -1,7 +1,7 @@
 class ntp {
 
-  package {'ntp':,
-    ensure => present
+  package {'ntp':
+    ensure => present,
   }
   include ntp::params
   include ntp::file
