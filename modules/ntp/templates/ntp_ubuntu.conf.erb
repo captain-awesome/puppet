@@ -17,7 +17,7 @@ filegen clockstats file clockstats type day enable
 # Use servers from the NTP Pool Project. Approved by Ubuntu Technical Board
 # on 2011-02-08 (LP: #104525). See http://www.pool.ntp.org/join.html for
 # more information.
-<%- @servers.each do |server| %>
+<% @servers.each do |server| -%>
 server <%= server %>
 <%- end -%>
 
