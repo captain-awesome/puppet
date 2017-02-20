@@ -6,6 +6,6 @@ class ntp::file {
   file {'/etc/ntp.conf':
     ensure  => file,
     require => Package['ntp'],
-    content => template ("ntp/${template}.erb"),
+    content => template ("/ntp/${template}.erb"),
   }
 }
