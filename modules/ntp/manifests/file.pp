@@ -1,7 +1,7 @@
 class ntp::file {
 
   $template = $ntp::params::template
-  $default_servers = $ntp::params::default_servers
+  $servers = $ntp::params::default_servers
 
   file {'/etc/ntp.conf':
     ensure  => file,
