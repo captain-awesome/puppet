@@ -48,6 +48,8 @@ node default {
 
 node 'rabelard1.mylabserver.com' {
   include pe_repo::platform::ubuntu_1404_amd64
+  class {'ntp': package => 'ntp',}
+  include ntp::service
 }
 
 node /^rabelard\d{1}.mylabserver.com$/ {
