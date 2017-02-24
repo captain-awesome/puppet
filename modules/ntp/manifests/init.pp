@@ -1,7 +1,8 @@
 class ntp ($package = $ntp::params::package) inherits ntp::params {
 
-  package {$package:
+  package {'ntp':
     ensure => present,
+    name   => $package,
   }
   #include ntp::params (no longer necessary due to inheritance of params class)
   include ntp::file
