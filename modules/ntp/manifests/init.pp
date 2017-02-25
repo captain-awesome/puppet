@@ -1,4 +1,4 @@
-class ntp ($package = $ntp::params::package) inherits ntp::params {
+class ntp ($package) inherits ntp::params {
 
   package {'ntp':
     ensure => present,
