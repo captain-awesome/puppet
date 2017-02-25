@@ -1,7 +1,7 @@
 class ntp::file ($template = $ntp::params::template, $servers = $ntp::params::default_servers) inherits ntp{
 
-  notify {"tjs template variable is now ${template}":}
-  $template = $ntp::params::template
+  notify {"this is a template variable is now ${template}":}
+  # $template = $ntp::params::template (if enabled, will error and produce cannot reassign error)
   $servers = $ntp::params::default_servers
 
   file {'/etc/ntp.conf':
