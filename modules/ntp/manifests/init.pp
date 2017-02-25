@@ -1,4 +1,4 @@
-class ntp ($package) inherits ntp::params {
+class ntp ($package = $ntp::params::package_name) inherits ntp::params {
   #could also be set as class ntp ($package = $ntp::params::package_name)
   #but the params class was defined in the node def in site.pp
 
