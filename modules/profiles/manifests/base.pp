@@ -6,8 +6,7 @@ class profiles::base {
   include base::ssh
   include base::variables
   include localusers
-  include localusers::groups::wheel
   include localusers::groups::finance
-  include ntp
+  include localusers::groups::wheel
   class {'ntp': package => 'ntp',}
 }
