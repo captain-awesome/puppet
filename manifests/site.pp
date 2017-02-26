@@ -48,22 +48,26 @@ node default {
 
 node 'rabelard1.mylabserver.com' {
   include pe_repo::platform::ubuntu_1404_amd64
-  $package = 'node scope variable'
-  class {'ntp': package => 'ntp',}
-  include ntp::service
+  include roles::webserver
+  # commented sections below is already included in roles::webserver
+  #$package = 'node scope variable'
+  #class {'ntp': package => 'ntp',}
+  #include ntp::service
 }
 
 node /^rabelard\d{1}.mylabserver.com$/ {
   $nodescope = 'this is defined within our node'
-  include localusers
-  include localusers::groups::wheel
-  include localusers::groups::finance
-  include base
-  include base::ssh
-  include base::params
-  include base::variables
-  include base::motd
-  include ntp
-  include panda
+  include roles::webserver
+  # commented sections below is already included in roles::webserver
+  #include localusers
+  #include localusers::groups::wheel
+  #include localusers::groups::finance
+  #include base
+  #include base::ssh
+  #include base::params
+  #include base::variables
+  #include base::motd
+  #include ntp
+  #include panda
   #notify {'this is a test notify':}
 }
