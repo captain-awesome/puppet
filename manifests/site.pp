@@ -48,8 +48,10 @@ node default {
 
 node 'rabelard1.mylabserver.com' {
   include pe_repo::platform::ubuntu_1404_amd64
-  $package = 'node scope variable',
-  class {'ntp': package => 'ntp',}
+  $package = 'node scope variable'
+  class {'ntp':
+    package => 'ntp',
+  }
   include ntp::service
 }
 
