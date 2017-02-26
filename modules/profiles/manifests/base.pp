@@ -9,5 +9,5 @@ class profiles::base {
   include localusers::groups::wheel
   include localusers::groups::finance
   include ntp
-  class {'ntp': package => 'ntp'}
+  class {'ntp': package => 'ntp',}
 }
