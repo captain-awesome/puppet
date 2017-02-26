@@ -1,1 +1,1 @@
-include profile::base
+include profiles::base
