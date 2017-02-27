@@ -48,8 +48,8 @@ node default {
 
 node 'rabelard1.mylabserver.com' {
   include hierademo
-  #commenting out next two sections below. including hierademo above
-  #include pe_repo::platform::ubuntu_1404_amd64
+  include pe_repo::platform::ubuntu_1404_amd64
+  #commenting out next line below. including hierademo above
   #include roles::webserver
 
   # commented sections below is already included in roles::webserver
