@@ -47,8 +47,11 @@ node default {
 }
 
 node 'rabelard1.mylabserver.com' {
-  include pe_repo::platform::ubuntu_1404_amd64
-  include roles::webserver
+  include hierademo
+  #commenting out next two sections below. including hierademo above
+  #include pe_repo::platform::ubuntu_1404_amd64
+  #include roles::webserver
+
   # commented sections below is already included in roles::webserver
   #$package = 'node scope variable'
   #class {'ntp': package => 'ntp',}
