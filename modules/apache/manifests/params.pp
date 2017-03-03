@@ -17,7 +17,7 @@ class apache::params {
       $vhost_dir    = 'etc/httpd/conf.d'
     }
     'Debian': {
-      $package_name = 'apache2',
+      $package_name = 'apache2'
       $service_name = 'apache2'
       $conf_dir     = '/etc/apache2/'
       $vhost_dir    = 'etc/apache2/sites-enabled'
