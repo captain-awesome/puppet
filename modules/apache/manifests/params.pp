@@ -11,7 +11,7 @@ class apache::params {
 
   case $::osfamily {
     'RedHat': {
-      $package_name = 'httpd',
+      $package_name = 'httpd'
       $service_name = 'httpd'
       $conf_dir     = '/etc/httpd/conf'
       $vhost_dir    = 'etc/httpd/conf.d'
