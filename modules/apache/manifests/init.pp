@@ -1,7 +1,13 @@
 # == Class: apache
 #
-class apache {
-  package {'http':
-    ensure => present,
-  }
+class apache (
+  $package_name  = $apache::params::package_name,
+  $service_name  = $apache::params::service_name,
+  $conf_dir      = $apache::params::conf_dir,
+  $vhost_dir     = $apache::params::vhost_dir,
+  $document_root = $apache::params::document_root,
+  $servername    = $apache::params::servername,
+  $log_dir       = $apache::params::log_dir,
+  ) inherits apache::params {
+
 }
