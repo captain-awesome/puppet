@@ -12,6 +12,6 @@ class apache (
 
   class apache::params {
     include apache::package
-    include apache:: service
+    include apache::service
   }
 }
