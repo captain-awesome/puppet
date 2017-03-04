@@ -10,18 +10,16 @@ class apache (
   $log_dir       = $apache::params::log_dir,
   ) inherits apache::params {
 
-  class apache::params {
-    include apache::package
-    include apache::service
+  include apache::package
+  include apache::service
 
-    file { $document_root:
-      ensure  =>  directory,
-      recurse =>  true,
-    }
+  file { $document_root:
+    ensure  =>  directory,
+    recurse =>  true,
+  }
 
-    file { $log_dir:
-      ensure  =>  directory,
-      recurse =>  true,
-    }
+  file { $log_dir:
+    ensure  =>  directory,
+    recurse =>  true,
   }
 }
