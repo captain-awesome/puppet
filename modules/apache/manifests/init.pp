@@ -10,4 +10,8 @@ class apache (
   $log_dir       = $apache::params::log_dir,
   ) inherits apache::params {
 
+  class apache::params {
+    include apache::package
+    include apache:: service
+  }
 }
