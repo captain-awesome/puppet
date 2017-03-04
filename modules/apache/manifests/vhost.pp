@@ -4,13 +4,23 @@ define apache::vhost ($port, $document_root, $servername, $vhost_name = '*', $vh
     mode  => '0677'
   }
 
-  file {'index':
-    ensure  => file,
-    path    => "${document_root}/index.html",
-    content => template('apache/index.html.erb')
+  $default_index = "index_${servername}_${port}"
+  $default_config = "config_${servername}_${port}"
+
+  file { $document_root:
+    ensure  =>  directory,
+    recurse =>  true,
+    before  => File[$default_index],
   }
 
-  file  {'config_file':
+  file {$default_index:
+    ensure  => file,
+    path    => "${document_root}/index.html",
+    content => template('apache/index.html.erb'),
+    before  => File[$default_config],
+  }
+
+  file  {$default_config:
     path    => "${vhost_dir}/${servername}.conf",
     content => template('apache/vhost.conf.erb'),
     require => Package['apache'],
