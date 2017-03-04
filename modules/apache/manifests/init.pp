@@ -13,5 +13,15 @@ class apache (
   class apache::params {
     include apache::package
     include apache::service
+
+    file { $document_root:
+      ensure  =>  directory,
+      recurse =>  true,
+    }
+
+    file { $log_dir:
+      ensure  =>  directory,
+      recurse =>  true,
+    }
   }
 }
