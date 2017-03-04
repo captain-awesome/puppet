@@ -4,7 +4,7 @@ class apache::service ($service_name = $apache::params::service_name) {
   service {'apache':
     ensure  => running,
     name    => $service_name,
-    enable  => running,
+    enable  => true,
     require => Package['apache'],
   }
 }
